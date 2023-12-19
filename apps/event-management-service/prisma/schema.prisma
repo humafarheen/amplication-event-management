@@ -17,17 +17,6 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
-
-model Customer {
-  createdAt DateTime @default(now())
-  events    Event[]
-  firstName String?
-  id        String   @id @default(cuid())
-  lastName  String?
-  phone     String?
-  updatedAt DateTime @updatedAt
-}
-
 model Event {
   createdAt  DateTime  @default(now())
   customer   Customer? @relation(fields: [customerId], references: [id])
