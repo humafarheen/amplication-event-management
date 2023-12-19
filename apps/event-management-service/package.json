@@ -1,5 +1,5 @@
 {
-  "name": "@event-management-service/server",
+  "name": "@event-management-service-1/server",
   "private": true,
   "scripts": {
     "start": "nest start",

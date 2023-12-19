@@ -1,5 +1,5 @@
 {
-  "name": "@event-management-service/admin",
+  "name": "@event-management-service-1/admin",
   "private": true,
   "dependencies": {
     "@apollo/client": "3.6.9",
