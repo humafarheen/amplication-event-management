@@ -11,24 +11,10 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { EventCreateNestedManyWithoutCustomersInput } from "./EventCreateNestedManyWithoutCustomersInput";
-import { ValidateNested, IsOptional, IsString } from "class-validator";
-import { Type } from "class-transformer";
+import { IsString, IsOptional } from "class-validator";
 
 @InputType()
 class CustomerCreateInput {
-  @ApiProperty({
-    required: false,
-    type: () => EventCreateNestedManyWithoutCustomersInput,
-  })
-  @ValidateNested()
-  @Type(() => EventCreateNestedManyWithoutCustomersInput)
-  @IsOptional()
-  @Field(() => EventCreateNestedManyWithoutCustomersInput, {
-    nullable: true,
-  })
-  events?: EventCreateNestedManyWithoutCustomersInput;
-
   @ApiProperty({
     required: false,
     type: String,
